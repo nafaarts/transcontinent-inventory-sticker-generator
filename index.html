@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- <link href="assets/css/bootstrap.min.css" rel="stylesheet"> -->
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link rel="shortcut icon" href="assets/img/icon_white.png" type="image/x-icon">
+    <title>Inventaris - Trans Continent</title>
+</head>
+
+<body>
+    <div class="card">
+        <header>
+            <img src="assets/img/logo.png" width="300px" alt="">
+            <h3>#Inventory sticker generator</h3>
+        </header>
+        <main>
+            <div class="form-generate">
+                <div class="form-input">
+                    <label for="kode">Item Code</label>
+                    <input type="text" id="kode" placeholder="Masukan kode">
+                </div>
+                <div class="form-textarea">
+                    <label for="deskripsi">Deskripsi</label>
+                    <textarea id="deskripsi" placeholder="Masukan deskripsi"></textarea>
+                </div>
+                <div class="form-button">
+                    <button id="print" class="generate-button">
+                        <svg style="margin-right: 10px;" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                            fill="#fff" viewBox="0 0 24 24">
+                            <path
+                                d="M24 5h-4v-5h-16v5h-4v13h4v6h9.519c2.947 0 6.029-3.577 6.434-6h4.047v-13zm-18-3h12v3h-12v-3zm8.691 16.648s1.469 3.352-2 3.352h-6.691v-8h12v2.648c0 3.594-3.309 2-3.309 2zm6.809-10.648c-.276 0-.5-.224-.5-.5s.224-.5.5-.5.5.224.5.5-.224.5-.5.5zm-5.5 9h-8v-1h8v1zm-3 1h-5v1h5v-1z" />
+                        </svg>
+                        <span>Print</span>
+                    </button>
+                    <!-- <button id="save-image">
+                        <span>Save as Image</span>
+                    </button> -->
+                </div>
+            </div>
+            <div id="preview">
+                <div class="sticker">
+                    <div class="sticker-header">
+                        <span>PROPERTY OF<br>TRANS CONTINENT</span>
+                    </div>
+                    <div class="sticker-body">
+                        <div id="QRCODE"></div>
+                        <span id="item-code">123 121 12 3 123</span>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <small>Developed by @ <a href="https://n.nafaarts.com" target="_blank">2021 intern</a> |
+                <strong>v2.0</strong></small>
+            <small><a href="https://tcontinent.com" target="_blank">www.tcontinent.com</a></small>
+        </footer>
+    </div>
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/qrcode.js"></script>
+    <script src="assets/js/htmltocanvas.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,196 @@
+* { 
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    transition: .3s;
+    font-family: 'calibri';
+}
+
+body {
+    height: 100vh;
+    background-image: url('/assets/img/dot-grid.png');
+    background-repeat: repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+    color: #9d9d9d;
+}
+
+a:hover {
+    color: #5e5e5e;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    height: auto;
+    width: 1200px;
+    background-color: #fff;
+    padding: 40px;
+    box-shadow: 0 0 8px #F0F0F0;
+    border-radius: 15px;
+}
+
+.card header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-transform: uppercase;
+    color: #9d9d9d;
+}
+
+.card main {
+    margin: 40px 0;
+    display: flex;
+}
+
+.card main #preview {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    width: 50%;
+}
+
+.card main #preview .sticker {
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    height: 3.5cm;
+    width: 2.5cm;
+    background-color: #fff;
+    transform: scale(3);
+    box-shadow: 0 0 5px gray;
+    border-radius: 0.1cm;
+    overflow: hidden;
+}
+
+.card main #preview .sticker .sticker-header {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    height: 29.42%;
+    width: 2.5cm;
+    background-color: #0e2267;
+    color: #fff;
+    font-weight: bold;
+    font-size: 8pt;
+    text-align: center;
+}
+
+.card main #preview .sticker .sticker-body {
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    height: 67.73%;
+    width: 2.5cm;
+    background-color: #ff0000;
+    color: #fff;
+    font-weight: bold;
+    font-size: 7pt;
+    text-align: center;
+}
+
+.card main #preview .sticker .sticker-body #QRCODE {
+    margin-bottom: 4px;
+    width: 1.58cm;
+}
+
+@media print {
+    body * {
+      visibility: hidden;
+    }
+    body {
+        background: #fff !important;
+    }
+    .sticker, .sticker * {
+      visibility: visible;
+    }
+    .card main #preview .sticker {
+      position: absolute;
+      left: 0;
+      top: 0;
+      transform: scale(1);
+      box-shadow: 0 0 0 transparent;
+      border-radius: 0;
+    }
+  }
+
+.card main .form-generate {
+    width: 50%;
+    height: auto;
+}
+
+.card main .form-generate .form-input, .form-textarea {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.card main .form-generate .form-input input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #F0F0F0;
+    margin-top: 5px;
+}
+
+.card main .form-generate .form-textarea textarea {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #F0F0F0;
+    margin-top: 5px;
+    height: 300px
+}
+
+.card main .form-generate .form-button {
+    display: flex;
+}
+
+.card main .form-generate .form-button button {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    border: 0;
+    font-size: 14px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.card main .form-generate .form-button button span {
+    margin-top: 3px;
+}
+
+#save-image {
+    margin-left: 10px;
+}
+
+.generate-button {background-image: linear-gradient(to right, #4b6cb7 0%, #182848  51%, #4b6cb7  100%)}
+.generate-button {
+   text-align: center;
+   transition: 0.5s;
+   background-size: 200% auto;
+   color: white;            
+   box-shadow: 0 0 20px #eee;
+   border-radius: 10px;
+   display: block;
+ }
+
+ .generate-button:hover {
+   background-position: right center; /* change the direction of the change here */
+   color: #fff;
+   text-decoration: none;
+ }
+
+
+.card footer {
+    display: flex;
+    justify-content:space-between;
+    color: #9d9d9d;
+}
+
