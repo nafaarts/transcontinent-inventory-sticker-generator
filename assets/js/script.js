@@ -19,14 +19,18 @@ document.getElementById('print').addEventListener('click', () => {
     window.print()
 })
 
-// document.getElementById('save-image').addEventListener('click', () => {
-//     html2canvas(document.querySelector(".sticker")).then(canvas => {
-//         var link = document.createElement('a')
-//         link.download = (kode.value != '' ? kode.value.replace(/\s/g, '-') : 'sample') + '.png'
-//         link.href = canvas.toDataURL()
-//         link.click()
-//     })
-// })
+document.getElementById('save-image').addEventListener('click', () => {
+    domtoimage.toPng(document.querySelector(".sticker"))
+        .then(function (dataUrl) {
+            var link = document.createElement('a')
+            link.download = (kode.value != '' ? kode.value.replace(/\s/g, '-') : 'sample') + '.png'
+            link.href = dataUrl
+            link.click()
+        })
+        .catch(function (error) {
+            console.error('oops, something went wrong!', error)
+        })
+})
 
 let config = {
     width: 2.5,

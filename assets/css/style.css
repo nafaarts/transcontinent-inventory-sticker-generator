@@ -24,6 +24,10 @@ a:hover {
     color: #5e5e5e;
 }
 
+.shadow {
+    box-shadow: 0 0 2px rgb(175, 175, 175);
+}
+
 .card {
     display: flex;
     flex-direction: column;
@@ -60,10 +64,9 @@ a:hover {
     display: flex;
     flex-direction: column;
     justify-content:space-between;
-    height: 3.5cm;
-    width: 2.5cm;
+    height: 420px;
+    width: 300px;
     background-color: #fff;
-    transform: scale(3);
     box-shadow: 0 0 5px gray;
     border-radius: 0.1cm;
     overflow: hidden;
@@ -74,11 +77,11 @@ a:hover {
     justify-content:center;
     align-items: center;
     height: 29.42%;
-    width: 2.5cm;
+    width: 100%;
     background-color: #0e2267;
     color: #fff;
     font-weight: bold;
-    font-size: 8pt;
+    font-size: 24pt;
     text-align: center;
 }
 
@@ -88,17 +91,17 @@ a:hover {
     justify-content:center;
     align-items: center;
     height: 67.73%;
-    width: 2.5cm;
+    width: 100%;
     background-color: #ff0000;
     color: #fff;
     font-weight: bold;
-    font-size: 7pt;
+    font-size: 22pt;
     text-align: center;
 }
 
 .card main #preview .sticker .sticker-body #QRCODE {
     margin-bottom: 4px;
-    width: 1.58cm;
+    width: 190px;
 }
 
 @media print {
@@ -115,11 +118,30 @@ a:hover {
       position: absolute;
       left: 0;
       top: 0;
-      transform: scale(1);
+      height: 3.5cm;
+      width: 2.5cm;
       box-shadow: 0 0 0 transparent;
       border-radius: 0;
     }
-  }
+
+    .card main #preview .sticker .sticker-header {
+        height: 29.42%;
+        width: 2.5cm;
+        font-size: 8pt;
+    }
+
+    .card main #preview .sticker .sticker-body {
+        height: 67.73%;
+        width: 2.5cm;
+        font-size: 7pt;
+    }
+
+    .card main #preview .sticker .sticker-body #QRCODE {
+        margin-bottom: 4px;
+        width: 1.58cm;
+    }
+
+}
 
 .card main .form-generate {
     width: 50%;
